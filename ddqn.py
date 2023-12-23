@@ -20,6 +20,29 @@ device = torch.device('cpu')
 Transition = namedtuple('Transition',
                         ('state', 'action', 'next_state', 'reward'))
 
+# Define the hyper parameters for the DDQN algorithm
+BATCH_SIZE = 128
+GAMMA = 0.99
+# The initial porbability of uniformly selecting an action (not greedy)
+EPS_START = 0.9
+# The final probability of uniformly selecting an action (not greedy)
+EPS_END = 0.05
+# The decay size on the probability of uniformly selecting an action
+EPS_DECAY = 1000
+# The extent to which the target network parameters should be updated (taken from policy network)
+TAU = 0.005
+# Learning rate for optimization
+LR = 1e-4
+
+# Cart-pole game
+env = gym.make('CartPole-v1')
+
+# Number of actions possible from each state
+n_actions = env.action_space.n
+# Number of dimensions (representation) for each state
+state, info = env.reset()
+dim_state = len(state)
+
 # Define a class that represents the experience replay memory
 class ReplayMemory(object):
 
@@ -130,29 +153,6 @@ def optimize_model():
     nn.utils.clip_grad_value_(policy_net.parameters(), 100)
     # Update the parameters of the policy network
     optimizer.step()
-
-# Define the hyper parameters for the DDQN algorithm
-BATCH_SIZE = 128
-GAMMA = 0.99
-# The initial porbability of uniformly selecting an action (not greedy)
-EPS_START = 0.9
-# The final probability of uniformly selecting an action (not greedy)
-EPS_END = 0.05
-# The decay size on the probability of uniformly selecting an action
-EPS_DECAY = 1000
-# The extent to which the target network parameters should be updated (taken from policy network)
-TAU = 0.005
-# Learning rate for optimization
-LR = 1e-4
-
-# Cart-pole game
-env = gym.make('CartPole-v1')
-
-# Number of actions possible from each state
-n_actions = env.action_space.n
-# Number of dimensions (representation) for each state
-state, info = env.reset()
-dim_state = len(state)
 
 # Define the policy and the target networks
 policy_net = DQN(dim_state, n_actions).to(device)
