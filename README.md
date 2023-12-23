@@ -1,7 +1,11 @@
 # DQN
 DQN-based model-free RL algorithms
 
-## Double DQN
-The implementation for the double DQN is available in `ddqn.py`. 
-## Prioritized Experience replay Double DQN
+## Documentation of algorithms
+You can find information about algorithms and technical considerations in the file `dql.pdf`.
+
+## Algorithms
+### Double DQN
+You can access the double Deep Q-Network (DDQN) implementation in the file named `ddqn.py`.
+### Prioritized Experience replay Double DQN
 TBD
