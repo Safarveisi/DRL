@@ -33,6 +33,8 @@ EPS_DECAY = 1000
 TAU = 0.005
 # Learning rate for optimization
 LR = 1e-4
+# Size of the memory
+MEMORY_SIZE = 10000
 
 # Cart-pole game
 env = gym.make('CartPole-v1')
@@ -165,7 +167,7 @@ target_net.load_state_dict(policy_net.state_dict())
 optimizer = optim.AdamW(policy_net.parameters(), lr=LR, amsgrad=True)
 # Buffer using which the experiences are stored and
 # sampled (uniformly at random) later
-memory = ReplayMemory(10000)
+memory = ReplayMemory(MEMORY_SIZE)
 
 # Number of steps (t) taken so far
 steps_done = 0
