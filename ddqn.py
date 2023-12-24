@@ -55,13 +55,13 @@ class ReplayMemory(object):
         self.memory.append(Transition(*args))
 
     def sample(self, batch_size: int) -> List[Transition]:
-        # Sampling withput replacement
+        # Sampling uniformly at random (without replacement)
         return random.sample(self.memory, batch_size)
 
     def __len__(self) -> int:
         return len(self.memory)
 
-# Define the Deep Q network (policy as well as the target network)
+# Define the policy as well as the target network
 class DQN(nn.Module):
 
     '''
@@ -179,7 +179,7 @@ for episode in range(num_episodes):
     state, info = env.reset()
     state = torch.tensor(state, dtype=torch.float32, device=device).unsqueeze(0)
     for t in count():
-        # Get the action using the current Q network
+        # Get the action using the current policy network
         action = select_action(state)
         # Get the next state, reward, status of the next state, ...
         observation, reward, terminated, truncated, _ = env.step(action.item())
