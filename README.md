@@ -12,5 +12,4 @@ You can access the implementation for DDQN with prioriztized experince replay in
 ### Dual Double DQN
 You can access the implementation for the dual architecture in `dddqn.ipynb`
 ### Proximal Policy Optimization (policy gradient) 
-TBD
-
+You can access the implementation for the proximal policy optimization in `ppo.ipynb`
