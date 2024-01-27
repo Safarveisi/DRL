@@ -4,13 +4,13 @@ You can find information about algorithms and technical considerations in `doc.p
 # Reinforcement learning algorithms
 ## Off-policy algorithms 
 
-| Name | Jupyter Notebook |
-| ---- | ---------------- |
-| Double Deep Q network (DDQN) | `ddqn.ipynb` |
-| Prioritized-experience-replay DDQN | `pddqn.ipynb` |
-| Dual DDQN (D-DDQN) | `dddqn.ipynb` |
+| Name | Jupyter Notebook | Link to paper |
+| ---- | ---------------- | ----------------- |
+| Double Deep Q network (DDQN) | `ddqn.ipynb` | [Link](https://arxiv.org/abs/1509.06461) |
+| Prioritized-experience-replay DDQN | `pddqn.ipynb` | https://arxiv.org/abs/1511.05952 |
+| Dual DDQN (D-DDQN) | `dddqn.ipynb` | https://ieeexplore.ieee.org/abstract/document/8483478 |
 
 ## On-policy algorithms
-| Name | Jupyter Notebook |
-| ---- | ---------------- |
-| Proximal Policy Optimization (PPO) | `ppo.ipynb` |
+| Name | Jupyter Notebook | Link to paper |
+| ---- | ---------------- | ------------- |
+| Proximal Policy Optimization (PPO) | `ppo.ipynb` | https://arxiv.org/abs/1707.06347 |
