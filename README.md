@@ -7,10 +7,10 @@ You can find information about algorithms and technical considerations in `doc.p
 | Name | Jupyter Notebook | Link to paper |
 | ---- | ---------------- | ----------------- |
 | Double Deep Q network (DDQN) | `ddqn.ipynb` | [Link](https://arxiv.org/abs/1509.06461) |
-| Prioritized-experience-replay DDQN | `pddqn.ipynb` | https://arxiv.org/abs/1511.05952 |
-| Dual DDQN (D-DDQN) | `dddqn.ipynb` | https://ieeexplore.ieee.org/abstract/document/8483478 |
+| Prioritized-experience-replay DDQN | `pddqn.ipynb` | [Link](https://arxiv.org/abs/1511.05952) |
+| Dual DDQN (D-DDQN) | `dddqn.ipynb` | [Link](https://ieeexplore.ieee.org/abstract/document/8483478) |
 
 ## On-policy algorithms
 | Name | Jupyter Notebook | Link to paper |
 | ---- | ---------------- | ------------- |
-| Proximal Policy Optimization (PPO) | `ppo.ipynb` | https://arxiv.org/abs/1707.06347 |
+| Proximal Policy Optimization (PPO) | `ppo.ipynb` | [Link](https://arxiv.org/abs/1707.06347) |
