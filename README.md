@@ -14,3 +14,12 @@ You can find information about algorithms and technical considerations in `doc.p
 | Name | Jupyter Notebook | Link to paper |
 | ---- | ---------------- | ------------- |
 | Proximal Policy Optimization (PPO) | `ppo.ipynb` | [Link](https://arxiv.org/abs/1707.06347) |
+
+# Usage
+Create a python virtual environment
+```bash
+python -m venv rl
+source rl/bin/activate
+pip install -r requirements.txt
+```
+Now you can set `rl` as your jupyter notebook kernel. **All jupyter notebooks are self-contained**. 

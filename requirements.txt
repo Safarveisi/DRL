@@ -1,0 +1,4 @@
+torch==1.6.0
+gymnasium==0.29.1
+numpy==1.21.0
+ipykernel==6.29.0 
