@@ -26,4 +26,4 @@ Now you can set `rl` as your jupyter notebook kernel. **All jupyter notebooks ar
 
 # Reference
 * [Git Repository 1](https://github.com/p-christ/Deep-Reinforcement-Learning-Algorithms-with-PyTorch/tree/master)
-* [Git repository 2](https://github.com/ericyangyu/PPO-for-Beginners)
+* [Git Repository 2](https://github.com/ericyangyu/PPO-for-Beginners)
