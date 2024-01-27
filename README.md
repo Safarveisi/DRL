@@ -23,3 +23,7 @@ source rl/bin/activate
 pip install -r requirements.txt
 ```
 Now you can set `rl` as your jupyter notebook kernel. **All jupyter notebooks are self-contained**. 
+
+# Reference
+* [Git Repository 1](https://github.com/p-christ/Deep-Reinforcement-Learning-Algorithms-with-PyTorch/tree/master)
+* [Git repository 2](https://github.com/ericyangyu/PPO-for-Beginners)
