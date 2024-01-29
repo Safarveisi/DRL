@@ -7,7 +7,7 @@ import numpy as np
 
 class GridWorldEnv(gym.Env):
 
-    def __init__(self, size: int):
+    def __init__(self, size: int) -> None:
         self.size = size  # The size of the square grid
         # Observations are dictionaries with the agent's and the target's location.
         # Each location is encoded as an element of {0, ..., `size`}^2, i.e. MultiDiscrete([size, size]).
@@ -28,17 +28,17 @@ class GridWorldEnv(gym.Env):
             3: np.array([0, -1]),
         }
 
-    def _get_obs(self):
+    def _get_obs(self) -> dict:
         return {'agent': self._agent_location, 'target': self._target_location}
     
-    def _get_info(self):
+    def _get_info(self) -> dict:
         return { 
             'distance': np.linalg.norm(
                 self._agent_location - self._target_location, ord=1
             )
         }
 
-    def reset(self, seed: Optional[int] = None):
+    def reset(self, seed: Optional[int] = None) -> Tuple[dict, dict]:
         # We need the following line to seed self.np_random
         super().reset(seed=seed)
 
@@ -57,7 +57,7 @@ class GridWorldEnv(gym.Env):
 
         return observation, info
 
-    def step(self, action: int) -> Tuple[np.ndarray, int, bool, bool, dict]:
+    def step(self, action: int) -> Tuple[dict, int, bool, bool, dict]:
         # Map the action (element of {0, 1, 2, 3}) to the direction we walk in
         direction = self._action_to_direction[action]
         # We use `np.clip` to make sure we don't leave the grid
