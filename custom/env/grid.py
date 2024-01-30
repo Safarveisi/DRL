@@ -28,13 +28,14 @@ class GridWorldEnv(gym.Env):
             3: np.array([0, -1]),
         }
 
-    def _get_obs(self) -> dict:
-        return {'agent': self._agent_location, 'target': self._target_location}
+    def _get_obs(self) -> np.ndarray:
+        # Normalized vector of the agent and the target coordinates
+        return np.concatenate([self._agent_location, self._target_location]) / (self.size - 1)
     
     def _get_info(self) -> dict:
         return { 
             'distance': np.linalg.norm(
-                self._agent_location - self._target_location, ord=1
+                self._agent_location - self._target_location, ord=2
             )
         }
 
