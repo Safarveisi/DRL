@@ -29,8 +29,8 @@ class GridWorldEnv(gym.Env):
         }
 
     def _get_obs(self) -> np.ndarray:
-        # Normalized vector of the agent and the target coordinates
-        return np.concatenate([self._agent_location, self._target_location]) / (self.size - 1)
+        # Use the difference between the two arrays to represent the observation
+        return self._target_location - self._agent_location
     
     def _get_info(self) -> dict:
         return { 
